@@ -1,6 +1,6 @@
 # The PartNet Symmetry Hierarchy Dataset (PartNet-Symh)
 
-The PartNet-Symh dataset augments the PartNet dataset provided by the paper "PartNet: A Large-scale Benchmark for Fine-grained and Hierarchical Part-level 3D Object Understanding" by adding a symmetry hierarchy of fine-grained parts for each shape. The symmetry hierarchies can be used to train the PartNet mdoel in the paper "PartNet: A Recursive Part Decomposition Network for Fine-grained and Hierarchical Shape Segmentation". In general, PartNet-Symh can be used to train any Recursive Neural Networks for part-level shape structure encoding/decoding like in GRASS [Li et al. 2017].
+The PartNet-Symh dataset augments the PartNet dataset originally created by Stanford University (see "PartNet: A Large-scale Benchmark for Fine-grained and Hierarchical Part-level 3D Object Understanding") by adding a symmetry hierarchy of fine-grained parts for each shape. The symmetry hierarchies were used to train the PartNet model in our paper "PartNet: A Recursive Part Decomposition Network for Fine-grained and Hierarchical Shape Segmentation". In general, PartNet-Symh can be used to train any Recursive Neural Networks models for part-level shape structure encoding/decoding, e.g., GRASS [Li et al. 2017].
 
 ### Introduction
 
@@ -60,7 +60,7 @@ The mat file under the labels folder corresponds to the type identification of e
 
 
 ##### E. the syms folder
-The mat file under the syms folder stores symmetrical parameters of each symmetrical node. In this example, there are four sets of symmetrical relationships, so four symmetrical parameters are stored. In partnet tree, corresponding ***node 12***,***node 13***,***node 9*** and ***node 8*** in turn.
+The mat file under the syms folder stores symmetrical parameters of each symmetrical node. In this example, there are four sets of symmetrical relationships, so four symmetrical parameters are stored. In partnet tree, corresponding to ***node 12***, ***node 13***, ***node 9*** and ***node 8*** in turn.
 
 ##### F. the models folder & the obbs folder
 The models folder stores models in .obj form. The obbs folder stores the corresponding obb files for each model.
@@ -69,11 +69,11 @@ The models folder stores models in .obj form. The obbs folder stores the corresp
 You could get the dataset [Here](https://www.dropbox.com/sh/o04yue60joxwkml/AACS0HmBybSgEruM3C5bmAvJa?dl=0).
 
 ### Reference
-[Wang et al. 2011] Yanzhen Wang, Kai Xu, Jun Li, Hao Zhang, Ariel Shamir, Ligang Liu, Zhi-Quan Cheng, and Yueshan Xiong, "Symmetry Hierarchy of Man-Made Objects", Computer Graphics Forum (Special Issue of Eurographics 2011), 30(2): 287-296.
+***[Wang et al. 2011]*** Yanzhen Wang, Kai Xu, Jun Li, Hao Zhang, Ariel Shamir, Ligang Liu, Zhi-Quan Cheng, and Yueshan Xiong, "Symmetry Hierarchy of Man-Made Objects", Computer Graphics Forum (Special Issue of Eurographics 2011), 30(2): 287-296.
 
-[van Kaick et al. 2013] Oliver van Kaick, Kai Xu, Hao Zhang, Yanzhen Wang, Shuyang Sun, Ariel Shamir and Daniel Cohen-Or, "Co-Hierarchical Analysis of Shape Structures", ACM Transactions on Graphics (SIGGRAPH 2013), 32(4).
+***[van Kaick et al. 2013]*** Oliver van Kaick, Kai Xu, Hao Zhang, Yanzhen Wang, Shuyang Sun, Ariel Shamir and Daniel Cohen-Or, "Co-Hierarchical Analysis of Shape Structures", ACM Transactions on Graphics (SIGGRAPH 2013), 32(4).
 
-[Li et al. 2017] Jun Li, Kai Xu, Siddhartha Chaudhuri, Ersin Yumer, Hao Zhang and Leonidas Guibas, "GRASS: Generative Recursive Autoencoders for Shape Structures", ACM Transactions on Graphics (SIGGRAPH 2017), 36(4).
+***[Li et al. 2017]*** Jun Li, Kai Xu, Siddhartha Chaudhuri, Ersin Yumer, Hao Zhang and Leonidas Guibas, "GRASS: Generative Recursive Autoencoders for Shape Structures", ACM Transactions on Graphics (SIGGRAPH 2017), 36(4).
 
 ## Citation
 If you use this dataset, please cite the following papers.
