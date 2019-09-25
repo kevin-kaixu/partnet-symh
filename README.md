@@ -70,7 +70,9 @@ You could get the dataset [Here](https://www.dropbox.com/sh/o04yue60joxwkml/AACS
 
 ### Reference
 [Wang et al. 2011] Yanzhen Wang, Kai Xu, Jun Li, Hao Zhang, Ariel Shamir, Ligang Liu, Zhi-Quan Cheng, and Yueshan Xiong, "Symmetry Hierarchy of Man-Made Objects", Computer Graphics Forum (Special Issue of Eurographics 2011), 30(2): 287-296.
+
 [van Kaick et al. 2013] Oliver van Kaick, Kai Xu, Hao Zhang, Yanzhen Wang, Shuyang Sun, Ariel Shamir and Daniel Cohen-Or, "Co-Hierarchical Analysis of Shape Structures", ACM Transactions on Graphics (SIGGRAPH 2013), 32(4).
+
 [Li et al. 2017] Jun Li, Kai Xu, Siddhartha Chaudhuri, Ersin Yumer, Hao Zhang and Leonidas Guibas, "GRASS: Generative Recursive Autoencoders for Shape Structures", ACM Transactions on Graphics (SIGGRAPH 2017), 36(4).
 
 ## Citation
