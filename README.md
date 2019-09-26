@@ -28,13 +28,13 @@ We use a chair as an example to illustrate how our data is organized. We first s
 ![image](https://github.com/PeppaZhu/PartNet_Dataset/blob/master/pictures/picture15.png) 
 ***Figure 1. A chair model is represented with a recursive symmetry hierarchy.***
 
-As shown in ***Figure 1***, a chair model is represented with a recursive symmetry hierarchy. Each leaf node represents a part. There are three types of nodes in the hierarchy: Type 0 -- Leaf nodes (e.g. **node 7**), Type 1 -- Adjacency nodes (e.g. ***node 14***, indicating the proximity relations between two adjacent parts), and Type 2 -- Symmetry nodes (e.g. ***node 9***, which represents either a reflectional or a rotational symmetry relations of multiple parts). A symmetry node stores the parameters (e.g., reflection axis) of the corresponding symmetry. Please see [Wang et al. 2011] and [Li et al. 2017] for more detailed definition of symmetry hierarchy. 
+As shown in ***Figure 1***, a chair model is represented with a recursive symmetry hierarchy. Each leaf node represents a part. There are three types of nodes in the hierarchy: **Type 0 -- Leaf nodes** (e.g. *node 7*), **Type 1 -- Adjacency nodes** (e.g. *node 14*, indicating the proximity relations between two adjacent parts), and **Type 2 -- Symmetry nodes** (e.g. *node 9*, which represents either a reflectional or a rotational symmetry relations of multiple parts). A symmetry node stores the parameters (e.g., reflection axis) of the corresponding symmetry. Please see [Wang et al. 2011] and [Li et al. 2017] for more detailed definition of symmetry hierarchy. 
 
 #### 2. Data organization
 
 There are seven folders in each of our data models. 
 
-##### A. the ops folder
+##### A. The ops folder
 Each mat file in the ops folder stores a corresponding type of the node of a partnet tree, as shown in ***Table 2*** for the corresponding type of the node in ***Figure 1 (b)***.(0 for leaf nodes, 1 for adjacent nodes and 2 for symmetric nodes).
 
 |  node ordinal number  | *node 7*  | *node 2* | *node 12*    |  *node 3*   | *node 13*  | *node 14*  | *node 15* | *node 6* | *node 4* | *node 9* | *node 5* | *node 1* | *node 8* | *node 10* | *node 11* | *node 16* | *node 17* |
