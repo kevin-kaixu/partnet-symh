@@ -22,7 +22,7 @@ The dataset contains 22699 3D shapes covering 24 shape categories:
 
 ### Explanation with an Example
 
-We use a chair as an example to illustrate how our data is organized. This chapter is specifically divided into two parts to elaborate the example. In the first part, we will use a figure to illustrate how to represent a model with a partnet tree. In the second part, we will explain the details of each folder.
+We use a chair as an example to illustrate how our data is organized. We first show a figure to illustrate how to represent a part-based model with a symmetry hierarchy. We then explain the details of data organization.
 
 #### 1. Representing the model with a partnet tree
 ![image](https://github.com/PeppaZhu/PartNet_Dataset/blob/master/pictures/picture15.png) 
