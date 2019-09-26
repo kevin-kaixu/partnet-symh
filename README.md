@@ -24,13 +24,13 @@ The dataset contains 22699 3D shapes covering 24 shape categories:
 
 We use a chair as an example to illustrate how our data is organized. We first show a figure to illustrate how to represent a part-based model with a symmetry hierarchy. We then explain the details of data organization.
 
-#### 1. Symmetry hierarchy representation
+#### 1. Symmetry hierarchy
 ![image](https://github.com/PeppaZhu/PartNet_Dataset/blob/master/pictures/picture15.png) 
 ***Figure 1. A chair model is represented with a recursive symmetry hierarchy.***
 
-As shown in ***Figure 1***, a chair model is represented with a recursive symmetry hierarchy. Each leaf node represents a part. There are three types of nodes in the hierarchy: 0 for leaf nodes (e.g. ***node 7***), 1 for adjacent nodes (e.g. ***node 14***, whose left child is adjacent to the right child), and 2 for symmetric nodes (e.g. ***node 9***, which is a rotational symmetric node and has only left child.The child is used to preserve a representative part in symmetric relationships.Then other parts in the symmetric relationship can be obtained by storing symmetric parameters).
+As shown in ***Figure 1***, a chair model is represented with a recursive symmetry hierarchy. Each leaf node represents a part. There are three types of nodes in the hierarchy: Type 0 -- Leaf nodes (e.g. ***node 7***), Type 1 -- Adjacency nodes (e.g. ***node 14***, indicating the proximity relations between two adjacent parts), and Type 2 -- Symmetry nodes (e.g. ***node 9***, which represents either a reflectional or a rotational symmetry relations of multiple parts). A symmetry node stores the parameters (e.g., reflection axis) of the corresponding symmetry. Please see [Wang et al. 2011] and [Li et al. 2017] for more detailed definition of symmetry hierarchy. 
 
-#### 2. Folder instructions
+#### 2. Data organization
 
 There are seven folders in each of our data models. 
 
