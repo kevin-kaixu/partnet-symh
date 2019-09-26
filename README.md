@@ -20,7 +20,7 @@ The dataset contains 22699 3D shapes covering 24 shape categories:
 ***Table 1. Specific information of our dataset.***
 
 
-### Demonstration
+### Explanation with an Example
 
 We use a chair as an example to illustrate how our data is organized. This chapter is specifically divided into two parts to elaborate the example. In the first part, we will use a figure to illustrate how to represent a model with a partnet tree. In the second part, we will explain the details of each folder.
 
@@ -79,8 +79,8 @@ You could get the dataset [Here](https://www.dropbox.com/sh/o04yue60joxwkml/AACS
 ## Citation
 If you use this dataset, please cite the following papers.
 ```
-@inproceedings{Yu_2019_CVPR,
-    title = {PartNet: A Recursive Part Decomposition Network for Fine-grained and Hierarchical Shape Segmentation},
+@InProceedings{Yu_2019_CVPR,
+    title = {{PartNet}: A Recursive Part Decomposition Network for Fine-grained and Hierarchical Shape Segmentation},
     author = {Fenggen Yu and Kun Liu and Yan Zhang and Chenyang Zhu and Kai Xu},
     booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
     pages = {to appear},
