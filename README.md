@@ -4,9 +4,9 @@ The PartNet-Symh dataset augments the PartNet dataset by adding a recursive hier
 
 ### Introduction
 
-PartNet consists of 24 object categories. The 3D models in the dataset are composed of fine-grained parts. We construct a recursive symmetry hierarchy [Wang et al. 2011] based on the fine-grained, point-sampled parts. We organize their dataset into the form of our PartNet dataset for the purpose of giving their models a hierarchy we designed.This dataset could enable and serve as a catalyst for many tasks such as shape analysis, dynamic 3D scene modeling and simulation, affordance analysis, and others.
+PartNet consists of 24 object categories. The 3D models in the dataset are composed of fine-grained parts. We construct a recursive symmetry hierarchy [Wang et al. 2011] based on the fine-grained parts. The data organization follows the original PartNet dataset.
 
-### Dataset information
+### Basic information
 
 The dataset contains 22699 3D shapes covering 24 shape categories:
 
