@@ -24,11 +24,11 @@ The dataset contains 22699 3D shapes covering 24 shape categories:
 
 We use a chair as an example to illustrate how our data is organized. We first show a figure to illustrate how to represent a part-based model with a symmetry hierarchy. We then explain the details of data organization.
 
-#### 1. Representing the model with a partnet tree
+#### 1. Symmetry hierarchy representation
 ![image](https://github.com/PeppaZhu/PartNet_Dataset/blob/master/pictures/picture15.png) 
-***Figure 1. The chair is represented as a top-down recursive hierarchy tree.***
+***Figure 1. A chair model is represented with a recursive symmetry hierarchy.***
 
-As shown in ***Figure 1 (a)***, this is an obj model displayed in Deep Exploration, which represents a chair.As shown in ***Figure 1 (b)***, we organize the model into a partnet tree. Each leaf node represents a part. Then we classify a partnet tree node into three categories: 0 for leaf nodes(e.g. ***node 7***), 1 for adjacent nodes (e.g. ***node 14***, whose left child is adjacent to the right child), and 2 for symmetric nodes (e.g. ***node 9***, which is a rotational symmetric node and has only left child.The child is used to preserve a representative part in symmetric relationships.Then other parts in the symmetric relationship can be obtained by storing symmetric parameters).
+As shown in ***Figure 1***, a chair model is represented with a recursive symmetry hierarchy. Each leaf node represents a part. There are three types of nodes in the hierarchy: 0 for leaf nodes (e.g. ***node 7***), 1 for adjacent nodes (e.g. ***node 14***, whose left child is adjacent to the right child), and 2 for symmetric nodes (e.g. ***node 9***, which is a rotational symmetric node and has only left child.The child is used to preserve a representative part in symmetric relationships.Then other parts in the symmetric relationship can be obtained by storing symmetric parameters).
 
 #### 2. Folder instructions
 
