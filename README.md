@@ -1,10 +1,10 @@
 # The PartNet Symmetry Hierarchy Dataset (PartNet-Symh)
 
-The PartNet-Symh dataset augments the PartNet dataset by adding a symmetry hierarchy of fine-grained parts for each shape. The PartNet dataset was originally proposed in the paper "PartNet: A Large-scale Benchmark for Fine-grained and Hierarchical Part-level 3D Object Understanding". The symmetry hierarchies were used to train the PartNet model in our paper "PartNet: A Recursive Part Decomposition Network for Fine-grained and Hierarchical Shape Segmentation". In general, PartNet-Symh can be used to train any Recursive Neural Networks models for part-level shape structure encoding/decoding, e.g., GRASS [Li et al. 2017].
+The PartNet-Symh dataset augments the PartNet dataset by adding a recursive hierarchical organization of fine-grained parts for each shape. The PartNet dataset was originally proposed in the paper "PartNet: A Large-scale Benchmark for Fine-grained and Hierarchical Part-level 3D Object Understanding". The symmetry hierarchies were used to train the PartNet model in our paper "PartNet: A Recursive Part Decomposition Network for Fine-grained and Hierarchical Shape Segmentation". In general, PartNet-Symh can be used to train any Recursive Neural Networks models for part-level shape structure encoding/decoding, e.g., GRASS [Li et al. 2017].
 
 ### Introduction
 
-PartNet consists of 24 object categories. The 3D models in the dataset are composed of fine-grained parts. We construct a recursive symmetry hierarchy based on the fine-grained, point-sampled parts. We organize their dataset into the form of our PartNet dataset for the purpose of giving their models a hierarchy we designed.This dataset could enable and serve as a catalyst for many tasks such as shape analysis, dynamic 3D scene modeling and simulation, affordance analysis, and others.
+PartNet consists of 24 object categories. The 3D models in the dataset are composed of fine-grained parts. We construct a recursive symmetry hierarchy [Wang et al. 2011] based on the fine-grained, point-sampled parts. We organize their dataset into the form of our PartNet dataset for the purpose of giving their models a hierarchy we designed.This dataset could enable and serve as a catalyst for many tasks such as shape analysis, dynamic 3D scene modeling and simulation, affordance analysis, and others.
 
 ### Dataset information
 
