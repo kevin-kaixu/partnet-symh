@@ -1,14 +1,12 @@
 # The PartNet Symmetry Hierarchy Dataset (PartNet-Symh)
 
-The PartNet-Symh dataset augments the PartNet dataset by adding a recursive hierarchical organization of fine-grained parts for each shape. The PartNet dataset was originally proposed in the paper "PartNet: A Large-scale Benchmark for Fine-grained and Hierarchical Part-level 3D Object Understanding". The symmetry hierarchies were used to train the PartNet model in our paper "PartNet: A Recursive Part Decomposition Network for Fine-grained and Hierarchical Shape Segmentation". In general, PartNet-Symh can be used to train any Recursive Neural Networks models for part-level shape structure encoding/decoding, e.g., GRASS [Li et al. 2017].
-
 ### Introduction
 
-PartNet consists of 24 object categories. The 3D models in the dataset are composed of fine-grained parts. We construct a recursive symmetry hierarchy [Wang et al. 2011] based on the fine-grained parts. The data organization follows the original PartNet dataset.
+The PartNet-Symh dataset augments the PartNet dataset by adding a recursive hierarchical organization of fine-grained parts for each shape. The PartNet dataset was originally proposed in the paper "PartNet: A Large-scale Benchmark for Fine-grained and Hierarchical Part-level 3D Object Understanding". The hierarchical organization follows the symmetry hierarchy defined in [Wang et al. 2011]. The symmetry hierarchies were used to train the PartNet model in our paper "PartNet: A Recursive Part Decomposition Network for Fine-grained and Hierarchical Shape Segmentation". In general, PartNet-Symh can be used to train any Recursive Neural Networks models for part-level shape structure encoding/decoding, e.g., GRASS [Li et al. 2017].
 
 ### Basic information
 
-The dataset contains 22699 3D shapes covering 24 shape categories:
+The dataset contains *22699* 3D shapes covering *24* shape categories:
 
 |  category_name  |  lamp   | table | knife   |  bag   | bed  | bottle   | bowl   | clock   | display   | dishwasher   | door   | earphone   | faucet   | hat   | storage   | keyboard   | laptop   | microwave   | mug   | refrigerator   | scissors   | trashcan   | vase   | chair   |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
@@ -28,7 +26,7 @@ We use a chair as an example to illustrate how our data is organized. We first s
 ![image](https://github.com/PeppaZhu/PartNet_Dataset/blob/master/pictures/picture15.png) 
 ***Figure 1. A chair model is represented with a recursive symmetry hierarchy.***
 
-As shown in ***Figure 1***, a chair model is represented with a recursive symmetry hierarchy. Each leaf node represents a part. There are three types of nodes in the hierarchy: **Type 0 -- Leaf nodes** (e.g. *node 7*), **Type 1 -- Adjacency nodes** (e.g. *node 14*, indicating the proximity relations between two adjacent parts), and **Type 2 -- Symmetry nodes** (e.g. *node 9*, which represents either a reflectional or a rotational symmetry relations of multiple parts). A symmetry node stores the parameters (e.g., reflection axis) of the corresponding symmetry. Please see [Wang et al. 2011] and [Li et al. 2017] for more detailed definition of symmetry hierarchy. 
+As shown in ***Figure 1***, a chair model is represented with a recursive symmetry hierarchy. Each leaf node represents a part. There are three types of nodes in the hierarchy: **Type 0 -- Leaf nodes** (e.g. *node 7*), **Type 1 -- Adjacency nodes** (e.g. *node 14*, indicating the proximity relations between two adjacent parts), and **Type 2 -- Symmetry nodes** (e.g. *node 9*, which represents either a reflectional or a rotational symmetry relations of multiple parts). A symmetry node stores the parameters (e.g., reflection axis) of the corresponding symmetry. Please refer to [Wang et al. 2011] and [Li et al. 2017] for more detailed definition of symmetry hierarchy. 
 
 #### 2. Data organization
 
