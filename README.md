@@ -6,7 +6,7 @@ The PartNet-Symh dataset augments the PartNet dataset by adding a recursive hier
 
 ### Basic information
 
-The dataset contains *22699* 3D shapes covering *24* shape categories:
+The dataset contains *22699* 3D shapes covering *24* shape categories. See ***Table 1*** for a summary of the dataset.
 
 |  category_name  |  lamp   | table | knife   |  bag   | bed  | bottle   | bowl   | clock   | display   | dishwasher   | door   | earphone   | faucet   | hat   | storage   | keyboard   | laptop   | microwave   | mug   | refrigerator   | scissors   | trashcan   | vase   | chair   |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
@@ -30,10 +30,10 @@ As shown in ***Figure 1***, a chair model is represented with a recursive symmet
 
 #### 2. Data organization
 
-There are seven folders in each of our data models. 
+There are seven folders for each model. 
 
 ##### A. The ops folder
-Each mat file in the ops folder stores a corresponding type of the node of a partnet tree, as shown in ***Table 2*** for the corresponding type of the node in ***Figure 1 (b)***.(0 for leaf nodes, 1 for adjacent nodes and 2 for symmetric nodes).
+Each mat file in this folder stores a corresponding type of the node of a partnet tree, as shown in ***Table 2*** for the corresponding type of the node in ***Figure 1 (b)***. (0 -- leaf node, 1 -- adjacency node, 2 -- symmetry node).
 
 |  node ordinal number  | *node 7*  | *node 2* | *node 12*    |  *node 3*   | *node 13*  | *node 14*  | *node 15* | *node 6* | *node 4* | *node 9* | *node 5* | *node 1* | *node 8* | *node 10* | *node 11* | *node 16* | *node 17* |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
@@ -42,13 +42,13 @@ Each mat file in the ops folder stores a corresponding type of the node of a par
 ***Table 2. Node type.***
 
 
-##### B. the part_fix folder
+##### B. The part_fix folder
 The mat file under the part_fix folder stores the box index corresponding to the leaf node of a model. 
 
-##### C. the boxes folder
+##### C. The boxes folder
 The mat file under the boxes folder stores the box corresponding to each leaf node of a model.
 
-##### D. the labels folder
+##### D. The labels folder
 The mat file under the labels folder corresponds to the type identification of each leaf node. As shown in ***Table 3***,***node 7*** represents the back of the chair (labeled by number 0),***node 6*** represents the chair cushion (labeled by number 1),***node 1***,***node 4*** and ***node 5*** represent legs (labeled by number 2),and ***node 2*** and ***node 3*** represents  armrest of the chair (labeled by number 3).  
 
 |  node ordinal number  |  *node 7*   | *node 2* | *node 3*    | *node 6*    |  *node 4*    | *node 5*   | *node 1*    |
@@ -58,21 +58,24 @@ The mat file under the labels folder corresponds to the type identification of e
 ***Table 3. Node label.***
 
 
-##### E. the syms folder
+##### E. The syms folder
 The mat file under the syms folder stores symmetrical parameters of each symmetrical node. In this example, there are four sets of symmetrical relationships, so four symmetrical parameters are stored. In partnet tree, corresponding to ***node 12***, ***node 13***, ***node 9*** and ***node 8*** in turn.
 
-##### F. the models folder & the obbs folder
-The models folder stores models in .obj form. The obbs folder stores the corresponding obb files for each model.
+##### F. The models folder
+The models folder stores models in .obj form.
 
-### Accessing to the dataset
-You could get the dataset [Here](https://www.dropbox.com/sh/o04yue60joxwkml/AACS0HmBybSgEruM3C5bmAvJa?dl=0).
+##### & The obbs folder
+The obbs folder stores the corresponding obb files for each model.
+
+### Downloading
+The dataset can be downloaded from [here](https://www.dropbox.com/sh/o04yue60joxwkml/AACS0HmBybSgEruM3C5bmAvJa?dl=0).
 
 ### Reference
-***[Wang et al. 2011]*** Yanzhen Wang, Kai Xu, Jun Li, Hao Zhang, Ariel Shamir, Ligang Liu, Zhi-Quan Cheng, and Yueshan Xiong, "Symmetry Hierarchy of Man-Made Objects", Computer Graphics Forum (Special Issue of Eurographics 2011), 30(2): 287-296.
+**[Wang et al. 2011]** Yanzhen Wang, Kai Xu, Jun Li, Hao Zhang, Ariel Shamir, Ligang Liu, Zhi-Quan Cheng, and Yueshan Xiong, "Symmetry Hierarchy of Man-Made Objects", Computer Graphics Forum (Special Issue of Eurographics 2011), 30(2): 287-296.
 
-***[van Kaick et al. 2013]*** Oliver van Kaick, Kai Xu, Hao Zhang, Yanzhen Wang, Shuyang Sun, Ariel Shamir and Daniel Cohen-Or, "Co-Hierarchical Analysis of Shape Structures", ACM Transactions on Graphics (SIGGRAPH 2013), 32(4).
+**[van Kaick et al. 2013]** Oliver van Kaick, Kai Xu, Hao Zhang, Yanzhen Wang, Shuyang Sun, Ariel Shamir and Daniel Cohen-Or, "Co-Hierarchical Analysis of Shape Structures", ACM Transactions on Graphics (SIGGRAPH 2013), 32(4).
 
-***[Li et al. 2017]*** Jun Li, Kai Xu, Siddhartha Chaudhuri, Ersin Yumer, Hao Zhang and Leonidas Guibas, "GRASS: Generative Recursive Autoencoders for Shape Structures", ACM Transactions on Graphics (SIGGRAPH 2017), 36(4).
+**[Li et al. 2017]** Jun Li, Kai Xu, Siddhartha Chaudhuri, Ersin Yumer, Hao Zhang and Leonidas Guibas, "GRASS: Generative Recursive Autoencoders for Shape Structures", ACM Transactions on Graphics (SIGGRAPH 2017), 36(4).
 
 ## Citation
 If you use this dataset, please cite the following papers.
