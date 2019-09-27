@@ -49,7 +49,7 @@ The mat file under the part_fix folder stores the box index corresponding to the
 The mat file under the boxes folder stores the box corresponding to each leaf node of a model.
 
 ##### D. The labels folder
-The mat file under the labels folder corresponds to the type identification of each leaf node. As shown in ***Table 3***,***node 7*** represents the back of the chair (labeled by number 0),***node 6*** represents the chair cushion (labeled by number 1),***node 1***,***node 4*** and ***node 5*** represent legs (labeled by number 2),and ***node 2*** and ***node 3*** represents  armrest of the chair (labeled by number 3).  
+The mat file under the labels folder corresponds to the type identification of each leaf node. As shown in ***Table 3***, *node 7* represents the back of the chair (labeled by number 0), *node 6* represents the chair cushion (labeled by number 1), *node 1*, *node 4* and *node 5* represent legs (labeled by number 2), and *node 2* and *node 3* represents  armrest of the chair (labeled by number 3).  
 
 |  node ordinal number  |  *node 7*   | *node 2* | *node 3*    | *node 6*    |  *node 4*    | *node 5*   | *node 1*    |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
@@ -59,12 +59,12 @@ The mat file under the labels folder corresponds to the type identification of e
 
 
 ##### E. The syms folder
-The mat file under the syms folder stores symmetrical parameters of each symmetrical node. In this example, there are four sets of symmetrical relationships, so four symmetrical parameters are stored. In partnet tree, corresponding to ***node 12***, ***node 13***, ***node 9*** and ***node 8*** in turn.
+The mat file in the syms folder stores symmetrical parameters of each symmetrical node. In this example, there are four sets of symmetrical relationships, so four symmetrical parameters are stored. In partnet tree, corresponding to *node 12*, *node 13*, *node 9* and *node 8* in turn.
 
 ##### F. The models folder
-The models folder stores models in .obj form.
+The models folder stores 3D models in .obj form.
 
-##### & The obbs folder
+##### G. The obbs folder
 The obbs folder stores the corresponding obb files for each model.
 
 ### Downloading
