@@ -6,7 +6,7 @@ The **PartNet-Symh dataset** augments the **PartNet dataset** by adding a recurs
 
 ### Basic information
 
-The dataset contains *22699* 3D shapes covering *24* shape categories. See ***Table 1*** for a summary of the dataset.
+The dataset contains *22699* 3D shapes covering *24* shape categories. See ***Table 1*** for the statistics of the dataset.
 
 |  category_name  |  lamp   | table | knife   |  bag   | bed  | bottle   | bowl   | clock   | display   | dishwasher   | door   | earphone   | faucet   | hat   | storage   | keyboard   | laptop   | microwave   | mug   | refrigerator   | scissors   | trashcan   | vase   | chair   |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
@@ -15,7 +15,7 @@ The dataset contains *22699* 3D shapes covering *24* shape categories. See ***Ta
 | maximum parts per shape | 122 | 47 | 5 | 4 | 59 | 5 | 3 | 8 | 5 | 8 | 9 | 8 | 18 | 3 | 100 | 63 | 3 | 8 | 4 | 11 | 5 | 43 | 8 | 30 |
 | minimum parts per shape | 2 | 2 | 2 | 2 | 4 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 13 | 2 | 3 | 2 | 2 | 2 | 2 | 2 | 2 |
 
-***Table 1. Specific information of our dataset.***
+***Table 1. Statistics of the PartNet-Symh dataset.***
 
 
 ### Explanation with an Example
