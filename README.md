@@ -67,7 +67,7 @@ The mat file in the syms folder stores the symmetry parameters for each symmetry
 The models folder stores the 3D mesh models in .obj format.
 
 ##### G. The obbs folder
-The obbs folder stores the corresponding obb files for each model.
+The obbs folder stores the whole shape obb for each model.
 
 ### Downloading
 The dataset can be downloaded from [here](https://www.dropbox.com/sh/o04yue60joxwkml/AACS0HmBybSgEruM3C5bmAvJa?dl=0).
