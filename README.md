@@ -2,7 +2,7 @@
 
 ### Introduction
 
-The **PartNet-Symh dataset** augments the **PartNet dataset** by adding a recursive hierarchical organization of fine-grained parts for each shape. The PartNet dataset was originally proposed in the paper "*PartNet: A Large-scale Benchmark for Fine-grained and Hierarchical Part-level 3D Object Understanding*". The hierarchical organization follows the symmetry hierarchy defined in [Wang et al. 2011]. The symmetry hierarchies were used to train the **PartNet model** proposed in our paper "P*artNet: A Recursive Part Decomposition Network for Fine-grained and Hierarchical Shape Segmentation*". In general, PartNet-Symh can be used to train any model for encoding/decoding part-based structures based on Recursive Neural Networks, e.g., GRASS [Li et al. 2017].
+The **PartNet-Symh dataset** augments the **PartNet dataset** by adding a recursive hierarchical organization of fine-grained parts for each shape. The PartNet dataset was originally proposed in the paper "*PartNet: A Large-scale Benchmark for Fine-grained and Hierarchical Part-level 3D Object Understanding*". The hierarchical organization follows the symmetry hierarchy defined in [Wang et al. 2011]. The symmetry hierarchies were used to train the **PartNet model** proposed in our paper "*PartNet: A Recursive Part Decomposition Network for Fine-grained and Hierarchical Shape Segmentation*". In general, PartNet-Symh can be used to train any model for encoding/decoding part-based structures based on Recursive Neural Networks, e.g., GRASS [Li et al. 2017].
 
 ### Basic information
 
@@ -24,7 +24,7 @@ Let us use a chair as an example to illustrate how our data is organized. We fir
 
 #### 1. Symmetry hierarchy
 ![image](https://github.com/PeppaZhu/PartNet_Dataset/blob/master/pictures/picture15.png) 
-***Figure 1. A chair model is represented with a recursive symmetry hierarchy.***
+***Figure 1. A chair model is represented with a symmetry hierarchy which is a top-down recursive decomposition into its constituent parts.***
 
 As shown in ***Figure 1***, a chair model is represented with a recursive symmetry hierarchy. Each leaf node represents a part. There are three types of nodes in the hierarchy: **Type 0 -- Leaf nodes** (e.g. *node 7*), **Type 1 -- Adjacency nodes** (e.g. *node 14*, indicating the proximity relations between two adjacent parts), and **Type 2 -- Symmetry nodes** (e.g. *node 9*, which represents either a reflectional or a rotational symmetry relations of multiple parts). A symmetry node stores the parameters (e.g., reflection axis) of the corresponding symmetry. Please refer to [Wang et al. 2011] and [Li et al. 2017] for more detailed definition of symmetry hierarchy.
 
@@ -35,7 +35,7 @@ We ensure all shapes belonging to the same shape category share the same high-le
 There are seven folders for each model. 
 
 ##### A. The ops folder
-Each mat file in this folder stores a corresponding type of the node of a partnet tree, as shown in ***Table 2*** for the corresponding type of the node in ***Figure 1 (b)***. (0 -- leaf node, 1 -- adjacency node, 2 -- symmetry node).
+Each mat file in this folder stores the corresponding types of the nodes of a symmetry hierarchy. Taking the symmetry hierarchy in  ***Figure 1 (b)*** for example, ***Table 2*** gives the node types in a depth-first traversing order. (0 -- leaf node, 1 -- adjacency node, 2 -- symmetry node).
 
 |  node ordinal number  | *node 7*  | *node 2* | *node 12*    |  *node 3*   | *node 13*  | *node 14*  | *node 15* | *node 6* | *node 4* | *node 9* | *node 5* | *node 1* | *node 8* | *node 10* | *node 11* | *node 16* | *node 17* |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
