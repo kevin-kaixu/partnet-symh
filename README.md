@@ -4,7 +4,7 @@
 
 The **PartNet-Symh dataset** augments the **PartNet dataset** by adding a recursive hierarchical organization of fine-grained parts for each shape. The PartNet dataset was originally proposed in the paper "*PartNet: A Large-scale Benchmark for Fine-grained and Hierarchical Part-level 3D Object Understanding*". The hierarchical organization follows the symmetry hierarchy defined in [Wang et al. 2011]. The symmetry hierarchies were used to train the **PartNet model** proposed in our paper "*PartNet: A Recursive Part Decomposition Network for Fine-grained and Hierarchical Shape Segmentation*". In general, PartNet-Symh can be used to train any model for encoding/decoding part-based structures based on Recursive Neural Networks, e.g., GRASS [Li et al. 2017].
 
-### Basic information
+### Basic Information
 
 The dataset contains *22699* 3D shapes covering *24* shape categories. See ***Table 1*** for the statistics of the dataset.
 
@@ -18,7 +18,7 @@ The dataset contains *22699* 3D shapes covering *24* shape categories. See ***Ta
 ***Table 1. Statistics of the PartNet-Symh dataset.***
 
 
-### Explanation with an Example
+### Explaining the Dataset with an Example
 
 Let us use a chair as an example to illustrate how our data is organized. We first show a figure to illustrate how to represent a part-based model with a symmetry hierarchy. We then explain the details of data organization.
 
