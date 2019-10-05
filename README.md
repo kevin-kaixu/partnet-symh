@@ -41,17 +41,17 @@ Each mat file in this folder stores the corresponding types of the nodes of a sy
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | node type | 0 | 0 | 2 | 0 | 2 | 1 | 1 | 0 | 0 | 2 | 0 | 0 | 2 | 1 | 1 | 1 | 1 |
 
-***Table 2. Node type of the nodes in Figure 1 (b) (0 -- leaf node, 1 -- adjacency node, 2 -- symmetry node).***
+***Table 2. Node type (0 -- leaf node, 1 -- adjacency node, and 2 -- symmetry node) of the nodes in Figure 1 (b).***
 
 
 ##### B. The part_fix folder
-The mat file under the part_fix folder stores the box index corresponding to the leaf node of a model. 
+The mat file under this folder stores the part bounding box indices corresponding to the leaf nodes of a symmetry hierarchy. 
 
 ##### C. The boxes folder
-The mat file under the boxes folder stores the box corresponding to each leaf node of a model.
+The mat file under this folder stores the parameters of the part bounding boxes corresponding to the leaf nodes of a symmetry hierarchy.
 
 ##### D. The labels folder
-The mat file under the labels folder corresponds to the type identification of each leaf node. As shown in ***Table 3***, *node 7* represents the back of the chair (labeled by number 0), *node 6* represents the chair cushion (labeled by number 1), *node 1*, *node 4* and *node 5* represent legs (labeled by number 2), and *node 2* and *node 3* represents  armrest of the chair (labeled by number 3).  
+The mat file under this folder corresponds to the type identification of each leaf node. As shown in ***Table 3***, *node 7* represents the back of the chair (labeled by number 0), *node 6* represents the chair cushion (labeled by number 1), *node 1*, *node 4* and *node 5* represent legs (labeled by number 2), and *node 2* and *node 3* represents  armrest of the chair (labeled by number 3).  
 
 |  node ordinal number  |  *node 7*   | *node 2* | *node 3*    | *node 6*    |  *node 4*    | *node 5*   | *node 1*    |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
