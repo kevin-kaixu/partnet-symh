@@ -37,9 +37,9 @@ There are seven folders for each model.
 ##### A. The ops folder
 Each mat file in this folder stores the corresponding types of the nodes of a symmetry hierarchy. Taking the symmetry hierarchy in  ***Figure 1 (b)*** for example, ***Table 2*** gives the node types in a [depth-first traversing order with vertex postorderings](https://en.wikipedia.org/wiki/Depth-first_search).
 
-|  node ordinal number  | *node 7*  | *node 2* | *node 12*    |  *node 3*   | *node 13*  | *node 14*  | *node 15* | *node 6* | *node 4* | *node 9* | *node 5* | *node 1* | *node 8* | *node 10* | *node 11* | *node 16* | *node 17* |
+|  node  | *node 7*  | *node 2* | *node 12*    |  *node 3*   | *node 13*  | *node 14*  | *node 15* | *node 6* | *node 4* | *node 9* | *node 5* | *node 1* | *node 8* | *node 10* | *node 11* | *node 16* | *node 17* |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| node type | 0 | 0 | 2 | 0 | 2 | 1 | 1 | 0 | 0 | 2 | 0 | 0 | 2 | 1 | 1 | 1 | 1 |
+| type | 0 | 0 | 2 | 0 | 2 | 1 | 1 | 0 | 0 | 2 | 0 | 0 | 2 | 1 | 1 | 1 | 1 |
 
 ***Table 2. Node type (0 -- leaf node, 1 -- adjacency node, and 2 -- symmetry node) of the nodes in Figure 1 (b).***
 
@@ -51,13 +51,13 @@ The mat file under this folder stores the part bounding box indices correspondin
 The mat file under this folder stores the parameters of the part bounding boxes corresponding to the leaf nodes of a symmetry hierarchy.
 
 ##### D. The labels folder
-The mat file under this folder corresponds to the type identification of each leaf node. As shown in ***Table 3***, *node 7* represents the back of the chair (labeled by number 0), *node 6* represents the chair cushion (labeled by number 1), *node 1*, *node 4* and *node 5* represent legs (labeled by number 2), and *node 2* and *node 3* represents  armrest of the chair (labeled by number 3).  
+The mat file under this folder stores the semantic label for each leaf node. As shown in ***Table 3***, *node 7* is the back part of the chair, labeled as 0. *node 6* is the seat, labeled as 1. *node 1*, *node 4* and *node 5* are the leg parts labeled as 2. *node 2* and *node 3* represent the armrests labeled as 3.  
 
-|  node ordinal number  |  *node 7*   | *node 2* | *node 3*    | *node 6*    |  *node 4*    | *node 5*   | *node 1*    |
+|  node  |  *node 7*   | *node 2* | *node 3*    | *node 6*    |  *node 4*    | *node 5*   | *node 1*    |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| node label | 0 | 3 | 3 | 1 | 2 | 2 | 2 |
+| label | 0 | 3 | 3 | 1 | 2 | 2 | 2 |
 
-***Table 3. Node label.***
+***Table 3. Node labels.***
 
 
 ##### E. The syms folder
