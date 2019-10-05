@@ -28,7 +28,7 @@ Let us use a chair as an example to illustrate how our data is organized. We fir
 
 As shown in ***Figure 1***, a chair model is represented with a recursive symmetry hierarchy. Each leaf node represents a part. There are three types of nodes in the hierarchy: **Type 0 -- Leaf nodes** (e.g. *node 7*), **Type 1 -- Adjacency nodes** (e.g. *node 14*, indicating the proximity relations between two adjacent parts), and **Type 2 -- Symmetry nodes** (e.g. *node 9*, which represents either a reflectional or a rotational symmetry relations of multiple parts). A symmetry node stores the parameters (e.g., reflection axis) of the corresponding symmetry. Please refer to [Wang et al. 2011] and [Li et al. 2017] for more detailed definition of symmetry hierarchy.
 
-We ensure all shapes belonging to the same shape category share the same high-level structure of symmetry hierarchy. This means that those shapes have consistency in the top few levels of their symmetry hierarchies. These levels generally correspond to semantically meaningful major parts. For example, a chair model is composed of a seat, a back, a leg and an armrest, and the symmetry hierarchies are consistent at the level of these parts across all chairs.
+We ensure all shapes belonging to the same shape category share the same high-level structure of symmetry hierarchy. This means that those shapes have consistency in the top few levels of their symmetry hierarchies. These levels generally correspond to semantically meaningful major parts. For example, a chair model is composed of a back, a seat, a leg and an armrest, and the symmetry hierarchies are consistent at the level of these parts across all chairs.
 
 #### 2. Data organization
 
@@ -51,13 +51,13 @@ The mat file under this folder stores the part bounding box indices correspondin
 The mat file under this folder stores the parameters of the part bounding boxes corresponding to the leaf nodes of a symmetry hierarchy.
 
 ##### D. The labels folder
-The mat file under this folder stores the semantic label for each leaf node. As shown in ***Table 3***, *node 7* is the back part of the chair, labeled as 0. *node 6* is the seat, labeled as 1. *node 1*, *node 4* and *node 5* are the leg parts labeled as 2. *node 2* and *node 3* represent the armrests labeled as 3.  
+The mat file under this folder stores the semantic label for each leaf node. ***Table 3*** gives the node labels of a chair model, *node 7* is the back part of the chair, labeled as 0. *node 6* is the seat, labeled as 1. *node 1*, *node 4* and *node 5* are the leg parts labeled as 2. *node 2* and *node 3* represent the armrests labeled as 3.  
 
 |  node  |  *node 7*   | *node 2* | *node 3*    | *node 6*    |  *node 4*    | *node 5*   | *node 1*    |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | label | 0 | 3 | 3 | 1 | 2 | 2 | 2 |
 
-***Table 3. Node labels.***
+***Table 3. Node labels (0 -- back, 1 -- seat, 2 -- leg, and 3 -- armrest).***
 
 
 ##### E. The syms folder
