@@ -28,7 +28,7 @@ Let us use a chair as an example to illustrate how our data is organized. We fir
 
 As shown in ***Figure 1***, a chair model is represented with a recursive symmetry hierarchy. Each leaf node represents a part. There are three types of nodes in the hierarchy: **Type 0 -- Leaf nodes** (e.g. *node 7*), **Type 1 -- Adjacency nodes** (e.g. *node 14*, indicating the proximity relations between two adjacent parts), and **Type 2 -- Symmetry nodes** (e.g. *node 9*, which represents either a reflectional or a rotational symmetry relations of multiple parts). A symmetry node stores the parameters (e.g., reflection axis) of the corresponding symmetry. Please refer to [Wang et al. 2011] and [Li et al. 2017] for more detailed definition of symmetry hierarchy.
 
-We ensure all shapes belonging to the same shape category share the same high-level structure of symmetry hierarchy. This means that those shapes have consistency in the top few levels of their symmetry hierarchies. These levels generally correspond to semantically meaningful major parts. For example, a chair model is composed of a back, a seat, a leg and an armrest, and the symmetry hierarchies are consistent at the level of these parts across all chairs.
+We ensure all shapes belonging to the same shape category share the same high-level structure of symmetry hierarchy. This means that those shapes have consistency in the top few levels of their symmetry hierarchies [van Kaick et al. 2013]. These levels generally correspond to semantically meaningful major parts. For example, a chair model is composed of a back, a seat, a leg and an armrest, and the symmetry hierarchies are consistent at the level of these parts across all chairs.
 
 #### 2. Data organization
 
@@ -61,10 +61,10 @@ The mat file under this folder stores the semantic label for each leaf node. ***
 
 
 ##### E. The syms folder
-The mat file in the syms folder stores symmetrical parameters of each symmetrical node. In this example, there are four sets of symmetrical relationships, so four symmetrical parameters are stored. In partnet tree, corresponding to *node 12*, *node 13*, *node 9* and *node 8* in turn.
+The mat file in the syms folder stores the symmetry parameters for each symmetry node. The symmetry parameters defined for each symmetry type can be found in [Li et al. 2017].
 
 ##### F. The models folder
-The models folder stores 3D models in .obj form.
+The models folder stores the 3D mesh models in .obj format.
 
 ##### G. The obbs folder
 The obbs folder stores the corresponding obb files for each model.
