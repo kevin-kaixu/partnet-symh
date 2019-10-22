@@ -6,14 +6,14 @@ The **PartNet-Symh dataset** augments the **PartNet dataset** by adding a recurs
 
 ### Basic Information
 
-The dataset contains *22699* 3D shapes covering *24* shape categories. See ***Table 1*** for the statistics of the dataset.
+The dataset contains *22369* 3D shapes covering *24* shape categories. See ***Table 1*** for the statistics of the dataset.
 
-|  category  |  lamp   | table | knife   |  bag   | bed  | bottle   | bowl   | clock   | display   | dishwasher   | door   | earphone   | faucet   | hat   | storage   | keyboard   | laptop   | microwave   | mug   | refrigerator   | scissors   | trashcan   | vase   | chair   |
+|  category  |  Bag   |  Bed   |  Bottle   |  Bowl   |  Chair   |  Clock   |  Display   |  Door   |  Faucet   |  Hat   |  Keyboard   |  Knife   |  Lamp   |  Laptop   |  Microwave   |  Mug   |  Refrigerator   |  Scissors   |  Storage   |  Table   |  TrashCan   |  Vase   |  Dishwasher   |  Earphone   |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| # shapes | 2603 | 5701 | 486 | 158 | 115 | 511 | 100 | 426 | 329 | 198 | 198 | 269 | 826 | 251 | 2546 | 109 | 92 | 81 | 232 | 209 | 112 | 296 | 411 | 6440 |
-| # parts | 12200 | 28958 | 1571 | 358 | 2420 | 1432 | 207 | 1151 | 1174 | 838 | 585 | 1193 | 4025 | 588 | 34564 | 5587 | 270 | 346 | 291 | 947 | 394 | 2565 | 1013 | 40879 |
-| max. # parts per shape | 122 | 47 | 5 | 4 | 59 | 5 | 3 | 8 | 5 | 8 | 9 | 8 | 18 | 3 | 100 | 63 | 3 | 8 | 4 | 11 | 5 | 43 | 8 | 30 |
-| min. # parts per shape | 2 | 2 | 2 | 2 | 4 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 13 | 2 | 3 | 2 | 2 | 2 | 2 | 2 | 2 |
+| # shapes |  154   |  147   |  511   |  102   |  6201   |  426   |  329   |  198   |  826   |  251   |  109   |  486   |  2603   |  92   |  81   |  231   |  164   |  112   |  2598   |  5868   |  296   |  180   |  135   |  269   |
+| # parts |  343   |  3534   |  1432   |  213   |  38858   |  1152   |  1174   |  586   |  3986   |  588   |  5690   |  1571   |  12567   |  270   |  346   |  529   |  671   |  394   |  35507   |  30408   |  2580   |  447   |  928   |  1193   |
+| max.# parts per shape |  4   |  89   |  5   |  3   |  30   |  8   |  5   |  9   |  18   |  3   |  64   |  5   |  128   |  3   |  8   |  4   |  8   |  5   |  101   |  50   |  43   |  4   |  8   |  8   |
+| min.# parts per shape |  2   |  4   |  2   |  2   |  2   |  2   |  2   |  2   |  2   |  2   |  13   |  2   |  2   |  2   |  3   |  2   |  2   |  2   |  2   |  2   |  2   |  2   |  2   |  2   |
 
 ***Table 1. Statistics of the PartNet-Symh dataset.***
 
@@ -23,10 +23,10 @@ The dataset contains *22699* 3D shapes covering *24* shape categories. See ***Ta
 Let us use a chair as an example to illustrate how our data is organized. We first show a figure to illustrate how to represent a part-based model with a symmetry hierarchy. We then explain the details of data organization.
 
 #### 1. Symmetry hierarchy
-![image](https://github.com/kevin-kaixu/partnet-symh/blob/master/symh.png) 
+![image](./symh.png) 
 ***Figure 1. A chair model is represented with a symmetry hierarchy which is a top-down recursive decomposition into its constituent parts.***
 
-As shown in ***Figure 1***, a chair model is represented with a recursive symmetry hierarchy. Each leaf node represents a part. There are three types of nodes in the hierarchy: **Type 0 -- Leaf nodes** (e.g. *node 7*), **Type 1 -- Adjacency nodes** (e.g. *node 14*, indicating the proximity relations between two adjacent parts), and **Type 2 -- Symmetry nodes** (e.g. *node 9*, which represents either a reflectional or a rotational symmetry relations of multiple parts). A symmetry node stores the parameters (e.g., reflection axis) of the corresponding symmetry. Please refer to [Wang et al. 2011] and [Li et al. 2017] for more detailed definition of symmetry hierarchy.
+As shown in ***Figure 1***, a chair model is represented with a recursive symmetry hierarchy. Each leaf node represents a part. There are three types of nodes in the hierarchy: **Type 0 -- Leaf nodes** (e.g. *node 2*), **Type 1 -- Adjacency nodes** (e.g. *node 11*, indicating the proximity relations between two adjacent parts), and **Type 2 -- Symmetry nodes** (e.g. *node 9* or *node 12*, which represents either a reflectional or a rotational symmetry relations of multiple parts). A symmetry node stores the parameters (e.g., reflection axis) of the corresponding symmetry. Please refer to [Wang et al. 2011] and [Li et al. 2017] for more detailed definition of symmetry hierarchy.
 
 We ensure all shapes belonging to the same shape category share the same high-level structure of symmetry hierarchy. This means that those shapes have consistency in the top few levels of their symmetry hierarchies [van Kaick et al. 2013]. These levels generally correspond to semantically meaningful major parts. For example, a chair model is composed of a back, a seat, a leg and an armrest, and the symmetry hierarchies are consistent at the level of these parts across all chairs.
 
@@ -37,27 +37,37 @@ There are seven folders for each model.
 ##### A. The ops folder
 Each mat file in this folder stores the corresponding types of the nodes of a symmetry hierarchy. Taking the symmetry hierarchy in  ***Figure 1 (b)*** for example, ***Table 2*** gives the node types in a [depth-first traversing order with vertex postorderings](https://en.wikipedia.org/wiki/Depth-first_search).
 
-|  node  | *node 7*  | *node 2* | *node 12*    |  *node 3*   | *node 13*  | *node 14*  | *node 15* | *node 6* | *node 4* | *node 9* | *node 5* | *node 1* | *node 8* | *node 10* | *node 11* | *node 16* | *node 17* |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- |---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| type | 0 | 0 | 2 | 0 | 2 | 1 | 1 | 0 | 0 | 2 | 0 | 0 | 2 | 1 | 1 | 1 | 1 |
+|  node  | *node 7*  | *node 3* | *node 4*    |  *node 11*   | *node 12*  | *node 13*  | *node 6* | *node 1* | *node 2* | *node 8* | *node 9* | *node 10* | *node 14* | *node 5* | *node 15* |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- |---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| type | 0 | 0 | 0 | 1 | 2 | 1 | 0 | 0 | 0 | 1 | 2 | 1 | 1 | 0 | 1 |
 
 ***Table 2. Node type (0 -- leaf node, 1 -- adjacency node, and 2 -- symmetry node) of the nodes in Figure 1 (b).***
 
 
-##### B. The part_fix folder
-The mat file under this folder stores the part bounding box indices corresponding to the leaf nodes of a symmetry hierarchy. 
+##### B. The part mesh indices folder
+The mat file under this folder stores the part mesh indices corresponding to the leaf nodes of a symmetry hierarchy.
+Taking the symmetry hierarchy in  ***Figure 1 (b)*** for example, ***Table 3*** gives the part mesh indices of leaf nodes in the same order as above.
+
+|  leaf node  | *node 7*  | *node 3* |  *node 4* | *node 6* | *node 1* | *node 2* | *node 5* |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- |---- |
+| part mesh indices | 6 | 5 | 4 | 7 | 16 | 9 | 1 |
+
+***Table 3. part mesh indices for leaf nodes.***
+
+
+For example, you can find the sixth part mesh for ***node 7*** in 'objs' class from result_after_merging.json file for this shape. Note that this json file can be found in dataset from [[Mo et al 2019]](https://cs.stanford.edu/~kaichun/partnet/).
 
 ##### C. The boxes folder
 The mat file under this folder stores the parameters of the part bounding boxes corresponding to the leaf nodes of a symmetry hierarchy.
 
 ##### D. The labels folder
-The mat file under this folder stores the semantic label for each leaf node. ***Table 3*** gives the node labels of a chair model, *node 7* is the back part of the chair, labeled as 0. *node 6* is the seat, labeled as 1. *node 1*, *node 4* and *node 5* are the leg parts labeled as 2. *node 2* and *node 3* represent the armrests labeled as 3.  
+The mat file under this folder stores the semantic label for each leaf node. ***Table 4*** gives the node labels of a chair model, *node 5* is the back part of the chair, labeled as 0. *node 7* is the seat, labeled as 1. *node 1*, *node 2* and *node 6* are the leg parts labeled as 2. *node 3* and *node 4* represent the armrests labeled as 3.  
 
-|  node  |  *node 7*   | *node 2* | *node 3*    | *node 6*    |  *node 4*    | *node 5*   | *node 1*    |
+|  node  | *node 7*  | *node 3* |  *node 4* | *node 6* | *node 1* | *node 2* | *node 5* |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| label | 0 | 3 | 3 | 1 | 2 | 2 | 2 |
+| label | 1 | 3 | 3 | 2 | 2 | 2 | 0 |
 
-***Table 3. Node labels (0 -- back, 1 -- seat, 2 -- leg, and 3 -- armrest).***
+***Table 4. Node labels (0 -- back, 1 -- seat, 2 -- leg, and 3 -- armrest).***
 
 
 ##### E. The syms folder
@@ -67,10 +77,15 @@ The mat file in the syms folder stores the symmetry parameters for each symmetry
 The models folder stores the 3D mesh models in .obj format.
 
 ##### G. The obbs folder
-The obbs folder stores the whole shape obb for each model.
+The obbs folder stores the whole shape obb for each model, which contains original part obb, adjacent part relations and symmetric parameters.
 
 ### Downloading
-The dataset can be downloaded from [here](https://www.dropbox.com/sh/o04yue60joxwkml/AACS0HmBybSgEruM3C5bmAvJa?dl=0).
+The dataset can be downloaded from [here](https://www.dropbox.com/sh/el63rv14d01mk89/AAANX5fxfZ5vV7ygTmj-I_ema?dl=0).
+
+### Read data
+Code for reading symmetry hierarchies and part bounding boxes can be found [here](https://github.com/PeppaZhu/grass).
+
+Code for sampling point cloud from part mesh, reading symmetry hierarchies and part point clouds can be found [here](https://github.com/FoggYu/PartNet).
 
 ### Reference
 **[Wang et al. 2011]** Yanzhen Wang, Kai Xu, Jun Li, Hao Zhang, Ariel Shamir, Ligang Liu, Zhi-Quan Cheng, and Yueshan Xiong, "Symmetry Hierarchy of Man-Made Objects", Computer Graphics Forum (Special Issue of Eurographics 2011), 30(2): 287-296.
