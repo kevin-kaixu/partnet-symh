@@ -71,7 +71,7 @@ The mat file under this folder stores the semantic label for each leaf node. ***
 
 
 ##### E. The syms folder
-The mat file in the syms folder stores the symmetry parameters for each symmetry node. The symmetry parameters defined for each symmetry type can be found in [Li et al. 2017].
+The mat file in the syms folder stores the symmetry parameters for each symmetry node. The symmetry labels are defined as: 0 -- reflected, -1 -- rotational, 1 -- translational. Note that these definitions are slightly different from those of GRASS [Li et al. 2017]. Please use following code to read data.
 
 ##### F. The models folder
 The models folder stores the 3D mesh models in .obj format.
