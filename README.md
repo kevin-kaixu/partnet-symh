@@ -23,7 +23,7 @@ The dataset contains *22369* 3D shapes covering *24* shape categories. See ***Ta
 Let us use a chair as an example to illustrate how our data is organized. We first show a figure to illustrate how to represent a part-based model with a symmetry hierarchy. We then explain the details of data organization.
 
 #### 1. Symmetry hierarchy
-![image](./symh.png) 
+![image](https://github.com/FENGGENYU/PartNet_symh/blob/master/symh.png) 
 ***Figure 1. A chair model is represented with a symmetry hierarchy which is a top-down recursive decomposition into its constituent parts.***
 
 As shown in ***Figure 1***, a chair model is represented with a recursive symmetry hierarchy. Each leaf node represents a part. There are three types of nodes in the hierarchy: **Type 0 -- Leaf nodes** (e.g. *node 2*), **Type 1 -- Adjacency nodes** (e.g. *node 11*, indicating the proximity relations between two adjacent parts), and **Type 2 -- Symmetry nodes** (e.g. *node 9* or *node 12*, which represents either a reflectional or a rotational symmetry relations of multiple parts). A symmetry node stores the parameters (e.g., reflection axis) of the corresponding symmetry. Please refer to [Wang et al. 2011] and [Li et al. 2017] for more detailed definition of symmetry hierarchy.
